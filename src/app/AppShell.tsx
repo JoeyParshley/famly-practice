@@ -1,5 +1,5 @@
 import { Container } from "@mui/material"
-import DashboardPage from "../features/dashboard/DashboardPage";
+import { DashboardPage } from "../features/dashboard/";
 import AppHeader from "./AppHeader";
 import EnvironmentBadge from "./EnvironmentBadge";
 
