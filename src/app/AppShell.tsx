@@ -2,13 +2,14 @@ import { Container, CssBaseline, ThemeProvider } from "@mui/material"
 import { DashboardPage } from "../features/dashboard/";
 import AppHeader from "./AppHeader";
 import EnvironmentBadge from "./EnvironmentBadge";
-import { professionalTheme } from "./theme";
+import { professionalDarkTheme } from "./theme";
+
 
 
 export default function AppShell() {
 
     return (
-        <ThemeProvider theme={professionalTheme}>
+        <ThemeProvider theme={professionalDarkTheme}>
             <CssBaseline />
             <Container maxWidth="md" sx={{ py: 3 }}>
                 <AppHeader />

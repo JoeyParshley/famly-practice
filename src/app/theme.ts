@@ -111,3 +111,45 @@ export const professionalTheme = createTheme({
     },
   },
 });
+
+export const professionalDarkTheme = createTheme({
+  palette: {
+    mode: "dark",
+    background: {
+      default: "#0F172A",
+      paper: "#1E293B",
+    },
+    primary: { main: "#3B82F6", contrastText: "#FFFFFF" },
+    secondary: { main: "#94A3B8", contrastText: "#0F172A" },
+    success: { main: "#22C55E" },
+    warning: { main: "#F59E0B" },
+    error: { main: "#EF4444" },
+    text: { primary: "#F8FAFC", secondary: "#94A3B8" },
+  },
+  typography: {
+    fontFamily: `system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif`,
+    h1: { fontWeight: 700 },
+    h2: { fontWeight: 700 },
+    h3: { fontWeight: 700 },
+    button: { textTransform: "none", fontWeight: 600 },
+  },
+  shape: { borderRadius: 14 },
+  components: {
+    MuiPaper: {
+      styleOverrides: {
+        root: {
+          boxShadow: "0 4px 20px rgba(0,0,0,0.3)",
+          border: "1px solid rgba(248,250,252,0.08)",
+        },
+      },
+    },
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          borderRadius: 12,
+          boxShadow: "none",
+        },
+      },
+    },
+  },
+});
