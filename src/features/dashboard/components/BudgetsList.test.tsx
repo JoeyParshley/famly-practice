@@ -23,10 +23,10 @@ describe('BudgetsList', () => {
     
     // Use textContent to check the full formatted content
     const groceriesContainer = screen.getByText('Groceries').closest('p')
-    expect(groceriesContainer).toHaveTextContent('Groceries - 520 / 600')
+    expect(groceriesContainer).toHaveTextContent('Groceries — 520 / 600')
     
     const diningContainer = screen.getByText('Dining').closest('p')
-    expect(diningContainer).toHaveTextContent('Dining - 265 / 200')
+    expect(diningContainer).toHaveTextContent('Dining — 265 / 200')
   })
 
   it('shows actual vs planned spending format', () => {

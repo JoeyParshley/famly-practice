@@ -19,7 +19,7 @@ const demo: Dashboard = {
         { id: "m2", name: "Marge", role: "Parent" },
         { id: "m3", name: "Bart", role: "Kid" },
         { id: "m4", name: "Lisa", role: "Kid" },
-        { id: "m5", name: "Maggies", role: "Kid" },
+        { id: "m5", name: "Maggie", role: "Kid" },
         { id: "m6", name: "Santas Little Helper", role: "Pet" }
     ],
 

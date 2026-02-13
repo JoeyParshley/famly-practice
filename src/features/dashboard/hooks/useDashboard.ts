@@ -6,14 +6,14 @@ type Status = "idle" | "loading" | "success" | "error";
 export function useDashboard() {
     const [status, setStatus] = useState<Status>("idle");
     const [data, setData] = useState<Dashboard | null>(null);
-    const [error, setError] = useState("");
+    const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
         let cancelled = false;
 
         async function load() {
             setStatus('loading');
-            setError('');
+            setError(null);
             
             try {
                 const dashboard = await getDashboard();
@@ -38,7 +38,8 @@ export function useDashboard() {
         status,
         data,
         error,
-        isEmpty: 
+        isEmpty:
+            status === "success" &&
             !!data &&
             data.members.length === 0 &&
             data.budgets.length === 0 &&

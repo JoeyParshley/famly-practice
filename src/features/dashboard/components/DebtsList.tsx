@@ -10,7 +10,7 @@ export default function DebtsList({ debts }: { debts: Debt[] }) {
             <Stack spacing={0.5} sx={{ mt: 0.5 }}>
                 {debts.map((debt: Debt) => (
                     <Typography key={debt.id} variant="body2">
-                        <b>{debt.name}</b> - ${debt.balance} - {debt.apr * 100}%
+                        <b>{debt.name}</b> - ${debt.balance.toLocaleString()} - {(debt.apr * 100).toFixed(1)}%
                     </Typography>
                 ))}
             </Stack>

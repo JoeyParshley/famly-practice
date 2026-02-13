@@ -2,9 +2,8 @@ import React from 'react'
 import ReactDom from 'react-dom/client'
 import App from './app/AppShell.tsx'
 import { CssBaseline } from "@mui/material";
-import { ThemeProvider, createTheme } from "@mui/material/styles";
-
-const theme = createTheme();
+import { ThemeProvider } from "@mui/material/styles";
+import { simpsonsTheme } from "./app/theme";
 
 async function enableMocking() {
     if (import.meta.env.VITE_API_MODE !== "mock") return;
@@ -15,7 +14,7 @@ async function enableMocking() {
 enableMocking().then(() => {
     ReactDom.createRoot(document.getElementById("root")!).render(
         <React.StrictMode>
-            <ThemeProvider theme={theme}>
+            <ThemeProvider theme={simpsonsTheme}>
                 <CssBaseline />
                 <App />
             </ThemeProvider>

@@ -11,13 +11,13 @@ export function DashboardPage() {
     const { status, data, error, isEmpty } = useDashboard();
 
         return (
-        <Paper elevation={1} sx={{ mt: 2, p: 2, borderRadius: 3 }}>
+        <Paper elevation={0} sx={{ mt: 3, p: 3 }}>
 
             <DashboardHeader />
 
             {status === "loading" && <DashboardSkeleton />}
 
-            {status === "error" && <ErrorBanner error={error} />}
+            {status === "error" && error && <ErrorBanner error={error} />}
 
             {status === "success" && isEmpty && <EmptyDataDisplay /> }
 

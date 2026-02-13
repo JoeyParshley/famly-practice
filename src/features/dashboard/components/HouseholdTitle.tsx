@@ -1,8 +1,8 @@
 import { Typography } from "@mui/material";
 
-export default function HouseholdTitle({name}: { name: string }) {
+export default function HouseholdTitle({ name }: { name: string }) {
     return (
-        <Typography variant="subtitle1" fontWeight={600}>
+        <Typography variant="h6" component="h2" sx={{ letterSpacing: 0.3 }}>
             {name}
         </Typography>
     )

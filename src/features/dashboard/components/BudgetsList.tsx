@@ -11,7 +11,7 @@ export default function BudgetsList({ budgets }: { budgets: Budget[] }) {
             <Stack spacing={0.5} sx={{ mt: 0.5 }}>
                 {budgets.map((budget: Budget) => (
                     <Typography key={budget.id} variant="body2">
-                        <b>{budget.category}</b> - {budget.actual} / {budget.planned}
+                        <b>{budget.category}</b> — {budget.actual.toLocaleString()} / {budget.planned.toLocaleString()}
                     </Typography>
                 ))}
             </Stack>

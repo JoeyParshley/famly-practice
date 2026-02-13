@@ -8,9 +8,9 @@ describe('AppHeader', () => {
     expect(screen.getByText('FAMLY')).toBeInTheDocument()
   })
 
-  it('renders as an h4 element', () => {
+  it('renders as a top-level heading', () => {
     render(<AppHeader />)
     const header = screen.getByText('FAMLY')
-    expect(header.tagName).toBe('H4')
+    expect(header.tagName).toBe('H1')
   })
 })
