@@ -13,7 +13,7 @@ export default function AppShell() {
             <CssBaseline />
             <Container maxWidth="md" sx={{ py: 3 }}>
                 <AppHeader />
-                {import.meta.env.DEV && <EnvironmentBadge />}
+                {process.env.NODE_ENV === "development" && <EnvironmentBadge />}
                 <DashboardPage />
             </Container>
         </ThemeProvider>
